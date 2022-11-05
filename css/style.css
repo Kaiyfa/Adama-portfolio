@@ -2,14 +2,33 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark: #333333;
+  --light: #f6f6f6;
+  --navlink-color: #AFF0F0;
+  --light-gray: #cccdce;
+}
+
 body {
+  display: inline-block;
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
 
-h1,
+/* Navbar and header */
+
+header {
+
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--dark);
+  color: gray;
+
+}
+
+
 h2,
 h3,
 h4,
@@ -18,6 +37,251 @@ h6 {
   margin: 0;
 }
 
+
 p {
-  margin: 0;
+  margin: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+
+ul a {
+
+  color: var(--navlink-color);
+  margin: 5px;
+
+}
+
+ol a {
+  color: var(--outer-space)
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  margin: 50px;
+}
+
+h1 {
+  font-size: 250%;
+  width: 25%;
+  background-color: #AFF0F0;
+  text-align: center;
+  line-height: -20px;
+  padding: 10px;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* hero-banner section */
+.hero-banner {
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: 100%;
+}
+
+/* Titles */
+
+h2 {
+  display: block;
+  font-size: 40px;
+  text-align: start;
+  color: var(--light-gray);
+  padding: -20px;
+  justify-items: flex-start;
+}
+
+h3 {
+  font-size: 20px;
+  background-color: #AFF0F0;
+  text-align: center;
+  margin: -10px;
+}
+
+h4 {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-bottom: 10px;
+  background-color: var(--navlink-color);
+  padding-top: 20px;
+}
+
+
+/* container  */
+
+.page-wrapper {
+  grid-template-columns: fit-content, 10% 40% 10%;
+  display: grid;
+  gap: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding: 70px;
+  position: relative;
+  grid-template-areas:
+    "about1 text-about2 text-about2"
+    "work3 work-contain4 work-contain4"
+    "work3 work-contain5 work-contain6"
+    "work3 work-contain7 work-contain8"
+    "contact9 contact10 contact10";
+
+}
+
+/* child container */
+
+.about1 {
+  grid-area: about1;
+  border-right: 4px solid #3333;
+  margin: 5px;
+}
+
+.text-about2 {
+  grid-area: text-about2;
+  position: relative;
+  margin: 5px;
+}
+
+.work3 {
+  grid-area: work3;
+  border-right: 4px solid #3333;
+  margin: 5px;
+
+}
+
+.work-contain4 {
+  display: flex;
+  height: 250px;
+  align-items: flex-end;
+  grid-area: work-contain4;
+  background-color: cadetblue;
+  background-size: 100%;
+  margin: 5px;
+  border: 6px solid var(--navlink-color);
+}
+
+.work-contain4:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
+}
+
+.work-contain5 {
+  display: flex;
+  height: 150px;
+  align-items: flex-end;
+  grid-area: work-contain5;
+  background-size: 100%;
+  background-image: url(../images/02-portfolio-1.jpg);
+  margin: 5px;
+  border: 6px solid var(--navlink-color);
+
+
+}
+
+.work-contain5:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
+}
+
+.work-contain6 {
+  display: flex;
+  height: 150px;
+  align-items: flex-end;
+  grid-area: work-contain6;
+  background-size: 100%;
+  background-image: url(../images/02-portfolio-2.jpg);
+  margin: 5px;
+  border: 6px solid var(--navlink-color);
+
+}
+
+.work-contain6:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
+}
+
+.work-contain7 {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  grid-area: work-contain7;
+  background-size: 100%;
+  background: url(../images/02-portfolio-4.jpg);
+  margin: 5px;
+  border: 6px solid var(--navlink-color);
+
+}
+
+.work-contain7:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
+}
+
+.work-contain8 {
+  height: 150px;
+  grid-area: work-contain8;
+  display: flex;
+  align-items: flex-end;
+  background-size: 100%;
+  background: url(../images/02-run-buddy.jpg);
+  margin: 5px;
+  border: 6px solid var(--navlink-color);
+
+}
+
+.work-contain8:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
+}
+
+.contact9 {
+  height: 70px;
+  grid-area: contact9;
+  border-right: 4px solid #3333;
+  margin: 5px;
+}
+
+.contact10 {
+  grid-area: contact10;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+
+  /* on tablets, set columns to only be 50% of the width and not grow */ */
+   .page-wrapper{
+    grid: 0 0 50%;
+    max-width: 50%;
+
+  }
+}
+
+/* media query for larger screens */
+@media screen and (min-max-width: 992px) {
+
+  header,
+  h1,
+  nav ul,
+  .hero-banner {
+    width: 50%;
+    flex-grow: 5;
+  }
+
+  .page-wrapper {
+    grid: 100%;
+    grid-template-columns: 1fr;
+    max-width: 50%;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 40px;
+
+  }
 }
