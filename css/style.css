@@ -75,6 +75,7 @@ h1 {
 }
 
 .avatar {
+   background-image: url(../images/Adama\ Sall.JPG);
   vertical-align: middle;
   width: 50px;
   height: 50px;
@@ -93,12 +94,12 @@ h1 {
 /* Titles */
 
 h2 {
-  display: block;
-  font-size: 40px;
-  text-align: start;
-  color: var(--light-gray);
-  padding: -20px;
-  justify-items: flex-start;
+  font-size: 25px;
+  justify-content: left;
+  align-content: top;
+  padding-right: 10px;
+  margin: 30px;
+  color: dimgrey;
 }
 
 h3 {
@@ -120,6 +121,7 @@ h4 {
 
 /* container  */
 
+ 
 .page-wrapper {
   grid-template-columns: fit-content, 10% 40% 10%;
   display: grid;
@@ -134,30 +136,30 @@ h4 {
     "work3 work-contain5 work-contain6"
     "work3 work-contain7 work-contain8"
     "contact9 contact10 contact10";
-
+ 
 }
-
+ 
 /* child container */
-
+ 
 .about1 {
   grid-area: about1;
   border-right: 4px solid #3333;
   margin: 5px;
 }
-
+ 
 .text-about2 {
   grid-area: text-about2;
   position: relative;
   margin: 5px;
 }
-
+ 
 .work3 {
   grid-area: work3;
   border-right: 4px solid #3333;
   margin: 5px;
-
+ 
 }
-
+ 
 .work-contain4 {
   display: flex;
   height: 250px;
@@ -168,11 +170,11 @@ h4 {
   margin: 5px;
   border: 6px solid var(--navlink-color);
 }
-
+ 
 .work-contain4:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
 }
-
+ 
 .work-contain5 {
   display: flex;
   height: 150px;
@@ -182,14 +184,14 @@ h4 {
   background-image: url(../images/02-portfolio-1.jpg);
   margin: 5px;
   border: 6px solid var(--navlink-color);
-
-
+ 
+ 
 }
-
+ 
 .work-contain5:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
 }
-
+ 
 .work-contain6 {
   display: flex;
   height: 150px;
@@ -199,13 +201,13 @@ h4 {
   background-image: url(../images/02-portfolio-2.jpg);
   margin: 5px;
   border: 6px solid var(--navlink-color);
-
+ 
 }
-
+ 
 .work-contain6:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
 }
-
+ 
 .work-contain7 {
   height: 150px;
   display: flex;
@@ -215,13 +217,13 @@ h4 {
   background: url(../images/02-portfolio-4.jpg);
   margin: 5px;
   border: 6px solid var(--navlink-color);
-
+ 
 }
-
+ 
 .work-contain7:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
 }
-
+ 
 .work-contain8 {
   height: 150px;
   grid-area: work-contain8;
@@ -231,26 +233,39 @@ h4 {
   background: url(../images/02-run-buddy.jpg);
   margin: 5px;
   border: 6px solid var(--navlink-color);
-
+ 
 }
-
+ 
 .work-contain8:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.865), 0 1px 2px rgba(0, 0, 0, 0.689);
 }
-
+ 
 .contact9 {
   height: 70px;
   grid-area: contact9;
   border-right: 4px solid #3333;
   margin: 5px;
 }
-
+ 
 .contact10 {
   grid-area: contact10;
   display: flex;
   justify-content: space-between;
-
+ 
 }
+ 
+ 
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+ 
+  /* on tablets, set columns to only be 50% of the width and not grow */ */
+   .page-wrapper{
+    grid: 0 0 50%;
+    max-width: 50%;
+ 
+  }
+}
+
 
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
